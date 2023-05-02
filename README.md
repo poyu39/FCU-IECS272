@@ -3,6 +3,12 @@
 
 ## 啟動虛擬環境
 
-```
+```powershell
 .\venv\Scripts\activate.ps1
+```
+
+## 離開環境
+
+```powershell
+deactivate
 ```
