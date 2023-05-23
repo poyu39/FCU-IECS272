@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block title %}
+{{ people.ssn }}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ people.pname }}</h1>
+
+<p>ssn: {{ people.ssn }}</p>
+<p>pname: {{ people.pname }}</p>
+<p>tall: {{ people.tall }}</p>
+<p>weight: {{ people.weight }}</p>
+<p>bmi: {{ people.bmi }}</p>
+
+{% if people.bmi > 24 %}
+    <h1>過重</h1>
+{% endif %}
+{% if people.bmi < 18.5 %}
+    <h1>過輕</h1>
+{% endif %}
+{% if people.bmi >= 18.5 and people.bmi <= 24 %}
+    <h1>正常</h1>
+{% endif %}
+
+
+<a href="/people/">back to people</a>
+
+{% endblock %}

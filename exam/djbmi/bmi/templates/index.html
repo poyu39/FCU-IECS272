@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div style="text-align:center;">
+            <div style="margin: 0px auto;">
+                <h1>All People</h1>
+                <ul>
+                    {% for x in people %}
+                    <li>
+                        <a href="details/{{ x.ssn }}">
+                            {{ x.ssn }}, {{ x.pname }}, {{ x.tall }}, {{ x.weight }}, {{x.tall}}, BMI= {{x.bmi}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                
+                <a href="/">back to home</a>
+
+            </div>
+            
+        </div>
+        
+    </body> 
+</html>
